@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eprescription">
+<head>
+    <meta charset="UTF-8">
+    <title>E-prescription</title>
+
+    <!-- Global stylesheets -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">-->
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+
+
+</head>
+<body>
+
+<!-- This is the main content that changes based on the route -->
+    <div ng-view></div>
+
+
+    <!-- Core template JS files -->
+    <!--<script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>-->
+    <!--<script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>-->
+    <!--<script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>-->
+    <!-- /core JS files -->
+
+
+    <!-- Theme template JS files -->
+    <!--<script type="text/javascript" src="assets/js/core/app.js"></script>-->
+    <!--<script type="text/javascript" src="assets/js/core/app.js"></script>-->
+    <!-- /theme JS files -->
+
+    <!-- Third party JS -->
+    <!--<script src="js/lib/angular.min.js"></script>-->
+    <!--<script src="js/lib/angular-route.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0-rc.2/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0-rc.2/angular-cookies.min.js"></script>
+
+    <!-- Main App Module -->
+    <script src="eprescription.module.js"></script>
+    <script src="config.route.js"></script>
+    <script src="eprescription.controller.js"></script>
+
+    <!-- doctors module -->
+    <script src="doctors/doctors.module.js"></script>
+    <!--<script src="doctors/config.route.js"></script>-->
+    <script src="doctors/doctors.controller.js"></script>
+
+    <!-- pharmacists module -->
+    <script src="pharmacists/pharmacists.module.js"></script>
+    <script src="pharmacists/config.route.js"></script>
+    <script src="pharmacists/pharmacists.controller.js"></script>
+
+    <!-- Angular spinner -->
+    <script src="js/spin.js"></script>
+    <script src="js/angular-spinner.js"></script>
+
+</body>
+</html>

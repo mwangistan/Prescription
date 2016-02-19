@@ -1,0 +1,232 @@
+<!-- Main navbar -->
+<div class="navbar navbar-default header-highlight">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/healthix-logo.png" alt=""></a>
+
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+            <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-mobile">
+        <ul class="nav navbar-nav">
+            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown dropdown-user">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="assets/images/image.png" alt="">
+                    <span>Mueni</span>
+                    <i class="caret"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                    <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+                    <li><a href="#"><span class="badge badge-warning pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                    <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-main">
+            <div class="sidebar-content">
+
+                <!-- User menu -->
+                <div class="sidebar-user">
+                    <div class="category-content">
+                        <div class="media">
+                            <a href="#" class="media-left"><img src="assets/images/image.png" class="img-circle img-sm" alt=""></a>
+                            <div class="media-body">
+                                <span class="media-heading text-semibold">Dorcas Mueni</span>
+                                <div class="text-size-mini text-muted">
+                                    <i class="icon-pin text-size-small"></i> &nbsp;Nairobi, KENYA
+                                </div>
+                            </div>
+
+                            <div class="media-right media-middle">
+                                <ul class="icons-list">
+                                    <li>
+                                        <a href="#"><i class="icon-cog3"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /user menu -->
+
+
+                <!-- Main navigation -->
+                <div class="sidebar-category sidebar-category-visible">
+                    <div class="category-content no-padding">
+                        <ul class="navigation navigation-main navigation-accordion">
+
+                            <!-- Main -->
+                            <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+                            <li><a href="#"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+                            <li><a href="#"><i class="icon-stack"></i> <span>Patient Waitlist</span></a></li>
+                            <li><a href="#"><i class="icon-list-unordered"></i> <span>Prescription History</span></a></li>
+                            <!-- /main -->
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /main navigation -->
+
+            </div>
+        </div>
+        <!-- /main sidebar -->
+
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Page header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <div class="page-title">Pharmacist's Dashboard</span> - E-Prescription</h4>
+                    </div>
+
+                </div>
+
+                <div class="breadcrumb-line">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="icon-home2 position-left"></i> E-Prescription</a></li>
+                        <li><a href="2_col.html">Pharmacist</a></li>
+                        <li class="active">Issue Drugs</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <!-- /page header -->
+
+
+            <!-- Content area -->
+            <div class="content">
+
+                <!-- Form Options -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Form Layout -->
+                        <form action="" name="patient-info">
+                            <div class="panel panel-flat">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Patient Information</h5>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group col-xs-4">
+                                        <label>Phone Number:</label>
+                                        <input type="text" class="form-control" placeholder="Phone Number">
+                                    </div>
+                                    <div class="form-group col-xs-4">
+                                        <label>Patient Name:</label>
+                                        <input type="text" class="form-control" placeholder="Patient Name">
+                                    </div>
+                                    <div class="form-group col-xs-4">
+                                        <label>Insurance No:</label>
+                                        <input type="text" class="form-control" placeholder="Patient Insurance No">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                        <!-- Patient Prescription List -->
+
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">Prescribed Drugs</h5>
+                            </div>
+                            <div class="panel-body">
+                                <div class="dataTables_wrapper no-footer">
+                                    <div class="datatable-header" id="DataTables_Table_0_wrapper">
+                                        <div id="DataTables_Table_0_filter" class="dataTable_filter">
+                                            <label>
+                                                <span>Filter :</span>
+                                                <input type="search" class="form-control" placeholder="Type to filter..." aria-controls="DataTables_Table_0">
+                                            </label>
+                                        </div>
+                                        <div class="dataTables_length" id="DataTables_Table_0_length"></div>
+                                    </div>
+                                    <div class="datatable-scroll">
+                                        <table class="table datatable-basic dataTable no-footer" role="grid">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th>Drug Name</th>
+                                                    <th>Common Name</th>
+                                                    <th>Restricted</th>
+                                                    <th>Available</th>
+                                                    <th>Dosage</th>
+                                                    <th>Refills</th>
+                                                    <th>Price</th>
+                                                    <th>Issue</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr role="row" class="odd">
+                                                    <td>Panadol</td>
+                                                    <td>Panadol</td>
+                                                    <td>Yes</td>
+                                                    <td>Yes</td>
+                                                    <td>Yes</td>
+                                                    <td>Yes</td>
+                                                    <td>Yes</td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                    <div class="datatable-footer">
+
+                                    </div>
+                                    <div class="text-right">
+                                        <button type="submit" class="btn btn-primary">
+                                            Issue Drugs
+                                            <i class="icon-arrow-right14 position-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer text-muted">
+                    &copy; 2015. <a href="#">Healthix Web App</a> by <a href="#" target="_blank">Healthix Developers</a>
+                </div>
+                <!-- /footer -->
+
+            </div>
+            <!-- /content area -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+</body>

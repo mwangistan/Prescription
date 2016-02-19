@@ -1,0 +1,222 @@
+<!-- Main navbar -->
+<div class="navbar navbar-default header-highlight">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/healthix-logo.png" alt=""></a>
+
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+            <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-mobile">
+        <ul class="nav navbar-nav">
+            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown dropdown-user">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="assets/images/image.png" alt="">
+                    <span>{{userInfo.name}}</span>
+                    <i class="caret"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                    <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+                    <li><a href="#"><span class="badge badge-warning pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                    <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /main navbar -->
+
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-main">
+            <div class="sidebar-content">
+
+                <!-- User menu -->
+                <div class="sidebar-user">
+                    <div class="category-content">
+                        <div class="media">
+                            <a href="" class="media-left"><img src="assets/images/image.png" class="img-circle img-sm" alt=""></a>
+                            <div class="media-body">
+                                <span class="media-heading text-semibold">{{userInfo.name}}</span>
+                                <div class="text-size-mini text-muted">
+                                    <i class="icon-pin text-size-small"></i> &nbsp;{{userInfo.company}}
+                                </div>
+                            </div>
+
+                            <div class="media-right media-middle">
+                                <ul class="icons-list">
+                                    <li>
+                                        <a href=""><i class="icon-cog3"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /user menu -->
+
+
+                <!-- Main navigation -->
+                <div class="sidebar-category sidebar-category-visible">
+                    <div class="category-content no-padding">
+                        <ul class="navigation navigation-main navigation-accordion">
+
+                            <!-- Main -->
+                            <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+                            <li><a href="#/doctors"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+                            <li><a href="#/doctors/findpatient"><i class="icon-folder-search"></i> <span>Find/Register Patient</span></a></li>
+                            <li><a href="#/doctors/prescribe"><i class="icon-list-numbered"></i> <span>Prescription</span></a></li>
+                            <li><a href="#/doctors/changeprescription"><i class="icon-blog"></i> <span>Change Prescription</span></a></li>
+                            <li><a href="#/doctors/recentprescriptions"><i class="icon-list-unordered"></i> <span>Recent Prescriptions</span></a></li>
+                            <li><a href="#"><i class="icon-eyedropper3"></i> <span>Refills</span></a></li>
+                            <li><a href="#"><i class="icon-comment-discussion"></i><span>Messages</span></a> </li>
+                            <li><a href="#"><i class="icon-stack3"></i> <span>Reports</span></a></li>
+                            <!-- /main -->
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- /main navigation -->
+
+            </div>
+        </div>
+        <!-- /main sidebar -->
+
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Page header -->
+            <div class="page-header">
+                <div class="page-header-content">
+                    <div class="page-title">
+                        <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Doctor's Dashboard</span> - E-Prescription</h4>
+                    </div>
+
+                </div>
+
+                <div class="breadcrumb-line">
+                    <ul class="breadcrumb">
+                        <li><a href=""><i class="icon-home2 position-left"></i> E-Prescription</a></li>
+                        <li><a href="">Doctor</a></li>
+                        <li class="active">Recent Prescriptions</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <!-- /page header -->
+
+
+            <!-- Content area -->
+            <div class="content">
+
+                <!-- Drug Search -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Recent Prescription</h5>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="form-group col-xs-10">
+                            <input type="text" ng-model="doctor_number"  class="form-control" placeholder="Enter Doctor Number">
+                        </div>
+                        <div class="form-group col-xs-2">
+                            <button class="btn btn-primary" type="submit" ng-click="getPrescriptions()">Get List<i class="icon-arrow-right14 position-right"></i></button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Recent Prescriptions</h5>
+                    </div>
+                    <div class="panel-body">
+                        <div class="dataTables_wrapper no-footer">
+                            <!--<div class="datatable-header" id="DataTables_Table_0_wrapper">-->
+                            <!--<div id="DataTables_Table_0_filter" class="dataTable_filter">-->
+                            <!--<label>-->
+                            <!--<span>Filter :</span>-->
+                            <!--<input type="search" class="form-control" placeholder="Type to filter..." aria-controls="DataTables_Table_0">-->
+                            <!--</label>-->
+                            <!--</div>-->
+                            <!--<div class="dataTables_length" id="DataTables_Table_0_length"></div>-->
+                            <!--</div>-->
+                            <div class="datatable-scroll">
+                                <table class="table datatable-basic dataTable no-footer" role="grid">
+                                    <thead>
+                                    <tr role="row">
+                                        <th>Drug Name</th>
+                                        <th>Quantity</th>
+                                        <th>Sig</th>
+                                        <th>Refills</th>
+                                        <th>Status</th>
+                                        <th>Comments</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr role="row" class="odd" ng-repeat="prescription in prescriptions">
+                                        <td>{{prescription.full_name}}</td>
+                                        <td>{{prescription.quantity}}</td>
+                                        <td>{{prescription.sig}}</td>
+                                        <td>{{prescription.refills}}</td>
+                                        <td>{{prescription.status}}</td>
+                                        <td>{{prescription.comments}}</td>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="datatable-footer">
+
+                            </div>
+                            <div class="text-right">
+                                <!--<button type="submit" ng-click="changePrescription()" class="btn btn-primary">-->
+                                    <!--Save Changes-->
+                                    <!--<i class="icon-arrow-right14 position-right"></i>-->
+                                <!--</button>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Footer -->
+                <div class="footer text-muted">
+                    &copy; 2015. <a href="#">Healthix Web App</a> by <a href="#" target="_blank">Healthix Developers</a>
+                </div>
+                <!-- /footer -->
+
+            </div>
+            <!-- /content area -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+</body>
